@@ -7,7 +7,7 @@ void part2(FILE *fp);
 int main(void)
 {
     FILE *fp;
-    fp = fopen("input/day-01.txt", "r");
+    fp = fopen("input/day01.txt", "r");
     if (fp == NULL) {
         printf("Failed to open input/day-01.txt\n");
         return EXIT_FAILURE;
