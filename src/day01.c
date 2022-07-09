@@ -35,7 +35,7 @@ void part1(FILE *fp)
         }
     }
 
-    printf("floor count: %d\n", floor_count);
+    printf("part 1: %d\n", floor_count);
 }
 
 
@@ -58,5 +58,5 @@ void part2(FILE *fp)
         }
     }
 
-    printf("position: %d\n", i);
+    printf("part 2: %d\n", i);
 }
