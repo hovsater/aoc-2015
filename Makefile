@@ -13,3 +13,7 @@ out/%: src/%.c
 .PHONY: clean
 clean:
 	rm -f $(OBJECTS)
+
+.PHONY: format
+format:
+	clang-format --style=WebKit -i $(SOURCES)
