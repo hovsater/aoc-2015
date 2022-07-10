@@ -2,17 +2,17 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -pedantic
 
 SOURCES = $(wildcard src/*.c)
-OBJECTS = $(addprefix out/,$(notdir $(SOURCES:.c=)))
+EXECUTABLES = $(addprefix out/,$(notdir $(SOURCES:.c=)))
 
 .PHONY: all
-all: $(OBJECTS)
+all: $(EXECUTABLES)
 
 out/%: src/%.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 .PHONY: clean
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(EXECUTABLES)
 
 .PHONY: format
 format:
