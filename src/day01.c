@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void part1(FILE* fp);
-void part2(FILE* fp);
+void part1(FILE* const fp);
+void part2(FILE* const fp);
 
 int main(void)
 {
-    FILE* fp;
-    fp = fopen("input/day01.txt", "r");
+    FILE* const fp = fopen("input/day01.txt", "r");
     if (fp == NULL) {
         printf("Failed to open input/day-01.txt\n");
         return EXIT_FAILURE;
@@ -21,7 +20,7 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-void part1(FILE* fp)
+void part1(FILE* const fp)
 {
     int c, floor_count = 0;
     while ((c = fgetc(fp)) != EOF) {
@@ -38,7 +37,7 @@ void part1(FILE* fp)
     printf("part 1: %d\n", floor_count);
 }
 
-void part2(FILE* fp)
+void part2(FILE* const fp)
 {
     int c, i = 0, floor_count = 0;
     while ((c = fgetc(fp)) != EOF) {
